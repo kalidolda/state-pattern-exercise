@@ -1,8 +1,12 @@
 package com.example.examplestatemachine;
 
 public abstract class State {
-    protected StateContext sc;
-    protected boolean accept = false;
+    protected StateContext context;
+    protected boolean accept;
+
+    public State(StateContext sc) {
+        context = sc;
+    }
     
     public void actionA() {}
     
